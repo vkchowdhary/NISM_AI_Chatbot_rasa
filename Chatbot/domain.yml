@@ -1,0 +1,51 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - hello_world
+  - stock_market
+  - live_quote
+  - live_news
+
+actions:
+  - action_hello_world
+  - action_portfolio_analyzer
+  - action_live_quote
+  - action_live_news
+  
+
+responses:
+  utter_greet:
+  - text: "Hey! I am Ayush, your Investment Adviser !! How may I help?"
+    
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_happy:
+  - text: "Great, carry on!"
+  
+  utter_cheer_up:
+  - text: "awesome, carry on!"
+  
+  
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_hello_world:
+  - text: "Hi, I am Viaan, you investment assistant"
+  
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
