@@ -86,14 +86,24 @@ class ActionPortfolioAnalyzer(Action):
        df = optimal_portfolio(portfolio, portfolio_size=15)
 #         
        print(df)
+       df = df[df['Optimal Weights']>0]
        stock_list = df.to_string()
+       
+       finance_fig = get_Finance_data(df)
+       finance_fig_list = finance_fig.to_string()
+       
        print (stock_list)
        message =' Stock recommendation for you is\n{}'.format(stock_list)
-     
-       dispatcher.utter_message(text='Market analyzed')
+       message2 = '\n\n Below are financial status of recommended companies \n{}'.format(finance_fig_list)
+       #dispatcher.utter_message(text='Market analyzed')
        dispatcher.utter_message(text=message)
-       dispatcher.utter_message(text='Please note, recommendation is based on modern portfolio theory')
-       dispatcher.utter_message(text='Investment is subject to market risk, please take study the stock recommendation before your invest')
+       dispatcher.utter_message(text=message2)
+       #dispatcher.utter_message(text='Please note, recommendation is based on modern portfolio theory')
+       dispatcher.utter_message(text='Please note: Investment is subject to market risk, please analyze the stock recommendation before your invest')
+       
+       
+       
+       
        return []       
    
 ## plan - full plan - fut 

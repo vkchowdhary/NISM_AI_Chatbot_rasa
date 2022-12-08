@@ -12,6 +12,7 @@ intents:
   - stock_market
   - live_quote
   - live_news
+  - out_of_scope
 
 actions:
   - action_hello_world
@@ -44,6 +45,9 @@ responses:
 
   utter_hello_world:
   - text: "Hi, I am Viaan, you investment assistant"
+  
+  utter_out_of_scope:
+  - text: "Sorry!! I didn't understand, Please try again"
   
   
 session_config:

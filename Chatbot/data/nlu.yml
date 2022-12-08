@@ -133,3 +133,19 @@ nlu:
      - TOI news
      - business news
      - market  news    
+     
+     
+     
+     
+     
+- intent: out_of_scope
+  examples: |
+     - please book my taxis  
+     - order my food 
+     - call my friend
+     - pick my phone 
+     - open youtube vedio
+     - cook my food
+     - drive to home
+     - show my map to home
+     - who is prime minister of India        

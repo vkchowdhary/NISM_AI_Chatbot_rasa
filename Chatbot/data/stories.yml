@@ -49,3 +49,13 @@ stories:
   steps:
   - intent: live_news
   - action: action_live_news
+  
+  
+  
+- story: out_of_scope path 
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  
+  
+  

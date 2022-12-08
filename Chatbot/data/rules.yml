@@ -11,3 +11,10 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+
+
+- rule: out_of_scope
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope
